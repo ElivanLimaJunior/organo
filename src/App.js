@@ -6,6 +6,8 @@ import Time from "./componentes/Time";
 
 function App() {
 
+  // Duvidas: Por que precisamos transformar a constante times em um state para mudar a cor?
+  // R: Mudamos porque só assim o React “escuta a mudança”. Com o setState o React fica ciente que aquele pedaço pode ser mudado, e assim que ele é mudado, o React atualiza a tela por nós
   const [times, setTimes] = useState([
     {
       nome: 'Programação',
