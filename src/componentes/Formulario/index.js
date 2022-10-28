@@ -1,10 +1,11 @@
+import { type } from '@testing-library/user-event/dist/type'
 import { useState } from 'react'
 import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
 
-const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
+const Formulario = ({ aoCadastrar, times, cadastrarTime }) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -66,6 +67,7 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
                 />
                 <CampoTexto
                     obrigatorio
+                    type='color'
                     label='cor' 
                     placeholder='Digite a cor do time '
                     valor={corTime}
